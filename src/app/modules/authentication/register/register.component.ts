@@ -32,9 +32,7 @@ export class RegisterComponent {
   }
   
   navigateToUrl(url: string) {
-    setTimeout(() => {
-      this.route.navigateByUrl('search');
-    }, 3000); // 3 seconds
+    this.route.navigateByUrl(url);
   }
 }
 //Before you save the array in the localStorage, you need to convert it to a string since it can only store strings. (stringify)
