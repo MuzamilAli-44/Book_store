@@ -1,4 +1,9 @@
-<form  style="background-color: #f3f4d0;" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+<!-- <h2>Login</h2> -->
+ 
+
+<!-- <img src="/login.jpg" alt="Error loading image"> -->
+<div class="container">
+<form  style="background-color: #7ba5d2;" #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
   <div>
     <label for="email">Email:</label>
     <input type="email" [(ngModel)]="email" name="email" required>
@@ -7,12 +12,12 @@
     <label for="password">Password:</label>
     <input type="password" [(ngModel)]="password" name="password" required>
   </div>
-  <button class= "buttons" (click)="navigateToUrl('search')">Login</button>
-
+  <!-- <button class= "buttons" type="submit">Login</button> -->
+  <button class="button" (click)="navigateToUrl('search')" >Login</button>
+  <button class="buttons" (click)="navigateToUrl('register')" >Don't have an account? Sign Up</button>
 
 </form>
 <p></p>
 
-<button class="buttons" (click)="navigateToUrl('register')" >Don't have an account? Sign Up</button>
 
-
+</div>
