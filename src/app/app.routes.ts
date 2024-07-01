@@ -1,11 +1,11 @@
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
-    {path: '',
-        loadChildren:()=>import('./modules/mod/mod.module').then((m)=>m.ModModule) //back call (.then tells to wait till the function is compiled)
-       },
+    {   
+        path: '', loadChildren:()=>import('./modules/authentication/authentication.module').then((m)=>m.ModModule)
+    },
     {
-        path: 'search', loadChildren:()=> import('./modules/search/search.module').then((m)=> m.SearchModule), 
+        path: 'search', loadChildren:()=> import('./modules/homepage/search.module').then((m)=> m.SearchModule), 
     },
     {
         path: 'categories', loadChildren:()=> import('./modules/category/category.module').then((m)=>m.CategoryModule)

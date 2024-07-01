@@ -33,7 +33,7 @@ export class RegisterComponent {
   
   navigateToUrl(url: string) {
     setTimeout(() => {
-      this.route.navigateByUrl(url);
+      this.route.navigateByUrl('search');
     }, 3000); // 3 seconds
   }
 }

@@ -3,11 +3,12 @@ import { NgIf } from '@angular/common';
 import { NgFor } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { data } from '../../../../assets/books';
+import { HomeComponent } from '../../../components/home/home.component';
 
 @Component({
   selector: 'app-category-list',
   standalone: true,
-  imports: [FormsModule, NgFor, NgIf],
+  imports: [FormsModule, NgFor, NgIf, HomeComponent],
   templateUrl: './category-list.component.html',
   styleUrl: './category-list.component.scss'
 })
