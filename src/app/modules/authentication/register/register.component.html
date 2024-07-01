@@ -2,7 +2,8 @@
 <!-- <body>
     style="background-color: #e0e8f0;"
 </body> -->
-<form  style="background-color: #f3f4d0;" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+<div class="container">
+<form  style="background-color: #7ba5d2;" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
     
     <div>
         <label for="name">Name:</label>
@@ -17,5 +18,6 @@
         <input type="password"  [(ngModel)]="password" name="password" required>
       </div>
       <!-- <button type="submit">Register</button> -->
-      <button (click)="navigateToUrl('login')"  class="buttons">Register</button>
-    </form>  
+      <button class="button" (click)="navigateToUrl('login')" >Register</button>
+    </form> 
+  </div>
