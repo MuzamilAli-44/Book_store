@@ -29,7 +29,8 @@ export class LoginComponent {
   }
 
 
-  navigateToUrl(url:string){
+  navigateToUrl(event:any,url:string){
+    event.preventDefault()
     this.router.navigateByUrl(url)
   }
 

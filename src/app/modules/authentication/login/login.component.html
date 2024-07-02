@@ -13,8 +13,8 @@
     <input type="password" [(ngModel)]="password" name="password" required>
   </div>
   <!-- <button class= "buttons" type="submit">Login</button> -->
-  <button class="button" (click)="navigateToUrl('search')" >Login</button>
-  <button class="buttons" (click)="navigateToUrl('register')" >Don't have an account? Sign Up</button>
+  <button class="button" type="submit" >Login</button>
+  <button class="buttons"  (click)="navigateToUrl($event,'register')" >Don't have an account? Sign Up</button>
 
 </form>
 <p></p>

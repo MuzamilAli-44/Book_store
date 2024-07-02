@@ -20,6 +20,6 @@ export class AuthService {
   }
 
   isLoggedIn(): boolean {
-    return this.isLogged;
+    return !!localStorage.getItem("userData");
   }
 }
