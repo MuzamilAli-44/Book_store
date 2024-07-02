@@ -2,6 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { AuthService } from '../../../auth-service.service';
 
 @Component({ 
   selector: 'app-login',
@@ -14,24 +15,25 @@ import { Router } from '@angular/router';
 export class LoginComponent {
   email: string='';
   password: string='';
+  isLogged:boolean=false;
 
-  constructor(private route: Router) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   onSubmit(form: any) {
-    // Retrieve stored user data using parse to convert to array 
-    const storedUserData = localStorage.getItem('userData');
-    if (storedUserData) {
-      const userData = JSON.parse(storedUserData);
-      if (form.value.email === userData.email && form.value.password === userData.password) {
-        alert('Login successful!');
-      } else {
-        alert('Invalid credentials. Please try again.');
-        
-      }
-    } 
+    if (this.authService.login(form.value.email, form.value.password)) {
+      alert('Login successful!');
+      this.router.navigate(['search']);
+    } else {
+      alert('Invalid credentials. Please try again.');
+    }
   }
 
+
   navigateToUrl(url:string){
-    this.route.navigateByUrl(url)
+    this.router.navigateByUrl(url)
   }
-}
+
+  }
+
+  
+
