@@ -64,4 +64,21 @@ form {
   form div {
     margin-bottom: 15px;
   }
-  
+  .error {
+    color: red;
+    font-size: 16px;
+    margin-top: 5px;
+  }
+
+  .immg {
+    position: absolute;
+    top: 36%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 27px;  /* Adjust the width and height as needed */
+    height: 27px; 
+  }
+  .password-input {
+    position: relative;
+  }
