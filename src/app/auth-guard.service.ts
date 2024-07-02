@@ -9,14 +9,12 @@ export class AuthGuardService implements CanActivate {
 
   authService:AuthService= inject(AuthService);
   route: Router= inject(Router);
-//  constructor(private router: Router, private authService: AuthService) {}
 
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean 
    {
     if(this.authService.isLoggedIn())
       {
         return true;
-        
       }
       else
       {

@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AuthService {
   private isLogged: boolean = false;
 
-  login(email: string, password: string) : boolean {
+  login(email: string, password: string): boolean {
     const storedUserData = localStorage.getItem('userData');
     if (storedUserData) {
       const userData = JSON.parse(storedUserData);
@@ -16,10 +16,15 @@ export class AuthService {
       }
     }
     return false;
-   
+  }
+
+  logout(): void {
+    const storedUserData = localStorage.getItem('userData');
+    this.isLogged = false;
   }
 
   isLoggedIn(): boolean {
-    return !!localStorage.getItem("userData");
+    return !!localStorage.getItem('userData');
   }
+  
 }
