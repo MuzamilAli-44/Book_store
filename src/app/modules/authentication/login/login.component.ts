@@ -23,7 +23,8 @@ export class LoginComponent {
     if (this.authService.login(form.value.email, form.value.password)) {
       alert('Login successful!');
       this.router.navigate(['search']);
-    } else {
+    } 
+    else {
       alert('Invalid credentials. Please try again.');
     }
   }

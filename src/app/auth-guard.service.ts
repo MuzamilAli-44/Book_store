@@ -19,8 +19,8 @@ export class AuthGuardService implements CanActivate {
       }
       else
       {
-        alert("You have not logged-in");
-        this.route.navigate(['login']);
+        alert("galt login hh ");
+        this.route.navigate(['/login']);
         return false;
 
       }
