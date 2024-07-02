@@ -1,3 +1,11 @@
+export class Books {
+  title: string = '';
+  author: string = '';
+  category: string = '';
+  rating: number = 0;
+}
+
+
 export const data = [
   {
     "title": "To Kill a Mockingbird",
