@@ -10,12 +10,13 @@ import { AuthService } from '../../../auth-service.service';
   styleUrl: './login.component.css',
   standalone:true,
   imports:[CommonModule, FormsModule]
+  
 
 })
 export class LoginComponent {
   email: string='';
   password: string='';
-  isLogged:boolean=false;
+  hidePassword:boolean=true;
 
   constructor(private router: Router, private authService: AuthService) {}
 
@@ -34,7 +35,9 @@ export class LoginComponent {
     event.preventDefault()
     this.router.navigateByUrl(url)
   }
-
+  togglePasswordVisibility() {
+    this.hidePassword = !this.hidePassword;
+  }
   }
 
   

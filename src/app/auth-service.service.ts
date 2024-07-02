@@ -12,7 +12,7 @@ export class AuthService {
       const userData = JSON.parse(storedUserData);
       if (email === userData.email && password === userData.password) {
         this.isLogged = true;
-        return true;
+        return this.isLogged;
       }
     }
     return false;

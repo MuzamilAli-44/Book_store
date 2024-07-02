@@ -15,6 +15,7 @@ export class RegisterComponent {
   name: string='';
   email: string='';
   password: string='';
+  hidePassword:boolean=true;
   
   constructor(private route: Router) {}
 
@@ -28,14 +29,12 @@ export class RegisterComponent {
     };
 
     localStorage.setItem('userData', JSON.stringify(userData)); //json to convert obj to string because setitem takes string 
+    this.route.navigateByUrl('login');
 
   }
-  
-  navigateToUrl(url: string) {
-    this.route.navigateByUrl(url);
-    // setTimeout(() => {
-    //   this.route.navigateByUrl(url);
-    // }, 3000); // 3 seconds
+
+  togglePasswordVisibility() {
+    this.hidePassword = !this.hidePassword;
   }
 }
 //Before you save the array in the localStorage, you need to convert it to a string since it can only store strings. (stringify)
