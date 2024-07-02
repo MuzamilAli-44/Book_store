@@ -7,10 +7,11 @@ import { AuthService } from './auth-service.service';
 })
 export class AuthGuardService implements CanActivate {
 
-  // authService:AuthService= inject(AuthService);
-  constructor(private route: Router, private authService: AuthService) {}
+  authService:AuthService= inject(AuthService);
+  route: Router= inject(Router);
+//  constructor(private router: Router, private authService: AuthService) {}
 
-  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean 
    {
     if(this.authService.isLoggedIn())
       {
@@ -19,8 +20,7 @@ export class AuthGuardService implements CanActivate {
       }
       else
       {
-        alert("galt login hh ");
-        this.route.navigate(['/login']);
+        this.route.navigate(['login']);
         return false;
 
       }
