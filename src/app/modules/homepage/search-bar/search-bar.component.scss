@@ -1,8 +1,9 @@
 .header {
   position: relative;
-  left: 45rem;
+  
+  left: 78%;
   top: 12rem;
-  width: 100%;
+  width: 20%;
   z-index: 1000; 
   
 }
@@ -21,7 +22,7 @@ input[type="text"] {
   width: 100%;
   max-width: 400px;
   border: 1px solid #ccc;
-  border-radius: 4px;
+  border-radius: 5px;
 }
 
 .results {
