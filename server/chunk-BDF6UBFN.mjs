@@ -1,2 +1,0 @@
-import './polyfills.server.mjs';
-import{Ra as r,h as i,n as e,za as n}from"./chunk-R47TPUCW.mjs";import"./chunk-NDYDZJSS.mjs";var m=[{path:"",loadComponent:()=>import("./chunk-6EROIC7O.mjs").then(o=>o.SearchBarComponent)}];var u=(()=>{let t=class t{};t.\u0275fac=function(p){return new(p||t)},t.\u0275mod=e({type:t}),t.\u0275inj=i({imports:[n,r.forChild(m),r]});let o=t;return o})();export{u as SearchModule};

@@ -1,2 +1,0 @@
-import './polyfills.server.mjs';
-import{Ra as i,h as r,n as e,za as n}from"./chunk-R47TPUCW.mjs";import"./chunk-NDYDZJSS.mjs";var m=[{path:"",loadComponent:()=>import("./chunk-QBUPM6HN.mjs").then(o=>o.CategoryListComponent)}];var l=(()=>{let t=class t{};t.\u0275fac=function(s){return new(s||t)},t.\u0275mod=e({type:t}),t.\u0275inj=r({imports:[n,i.forChild(m),i]});let o=t;return o})();export{l as CategoryModule};

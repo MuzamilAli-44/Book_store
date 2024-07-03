@@ -1,2 +1,0 @@
-import './polyfills.server.mjs';
-import{a as u}from"./chunk-QZ3TMGME.mjs";import{I as r,Na as s,ca as a,m as n}from"./chunk-R47TPUCW.mjs";var d=(()=>{let t=class t{constructor(i,e){this.router=i,this.authService=e,this.logoutUser()}logoutUser(){this.authService.logout(),alert("You are Logged out"),this.router.navigate(["login"])}};t.\u0275fac=function(e){return new(e||t)(r(s),r(u))},t.\u0275cmp=n({type:t,selectors:[["app-logout"]],standalone:!0,features:[a],decls:0,vars:0,template:function(e,c){}});let o=t;return o})();export{d as a};
