@@ -45,13 +45,13 @@ form {
     border-radius: 3px;
     box-sizing: border-box;
   }
-  
+/*   
   form input[type="text"]:focus,
   form input[type="email"]:focus,
   form input[type="password"]:focus {
     border-color: #007BFF;
     outline: none;
-  }
+  } */
   
   /* Styles for the submit button */
   .button {
@@ -91,7 +91,7 @@ form {
     width: 27px;  /* Adjust the width and height as needed */
     height: 27px; 
   }
-  
+
   .password-input {
     position: relative;
   }

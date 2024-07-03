@@ -50,12 +50,12 @@ form input[type="password"] {
   box-sizing: border-box;
 }
 
-
+/* 
 form input[type="email"]:focus,
 form input[type="password"]:focus {
   border-color: #007bff;
   outline: none;
-}
+} */
 
 .button {
   width: 35%;
