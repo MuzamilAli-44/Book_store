@@ -1,0 +1,10 @@
+{
+  "routes": [
+    "/",
+    "/categories",
+    "/login",
+    "/logout",
+    "/register",
+    "/search"
+  ]
+}

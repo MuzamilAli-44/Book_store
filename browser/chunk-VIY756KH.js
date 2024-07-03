@@ -1,0 +1,1 @@
+import{Z as n,fa as i,j as r,n as e}from"./chunk-OOFTIQN6.js";var m=[{path:"",loadComponent:()=>import("./chunk-IMULHCZA.js").then(o=>o.CategoryListComponent)}];var l=(()=>{let t=class t{};t.\u0275fac=function(s){return new(s||t)},t.\u0275mod=e({type:t}),t.\u0275inj=r({imports:[n,i.forChild(m),i]});let o=t;return o})();export{l as CategoryModule};

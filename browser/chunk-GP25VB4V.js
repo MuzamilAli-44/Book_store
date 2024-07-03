@@ -1,0 +1,1 @@
+import{Z as n,fa as r,j as i,n as e}from"./chunk-OOFTIQN6.js";var m=[{path:"",loadComponent:()=>import("./chunk-C3VXRCVY.js").then(o=>o.SearchBarComponent)}];var u=(()=>{let t=class t{};t.\u0275fac=function(p){return new(p||t)},t.\u0275mod=e({type:t}),t.\u0275inj=i({imports:[n,r.forChild(m),r]});let o=t;return o})();export{u as SearchModule};
