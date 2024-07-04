@@ -11,15 +11,8 @@ export const routes: Routes = [
   {
     path: 'search',
     loadChildren: () =>
-      import('./modules/homepage/search.module').then((m) => m.SearchModule),
+      import('./modules/homepage/homepage.module').then((m) => m.HomepageModule),
     canActivate: [AuthGuardService],
   },
-  {
-    path: 'categories',
-    loadChildren: () =>
-      import('./modules/category/category.module').then(
-        (m) => m.CategoryModule
-      ),
-      
-  },
+
 ];

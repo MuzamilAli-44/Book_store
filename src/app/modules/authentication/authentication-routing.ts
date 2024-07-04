@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-const routes: Routes = [
+export const ChildrenRoutes: Routes = [
   {
     path: '',
     loadComponent: () =>
@@ -23,7 +23,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [RouterModule.forChild(ChildrenRoutes)],
   exports: [RouterModule],
 })
 export class ModRoutingModule {}

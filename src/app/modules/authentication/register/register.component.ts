@@ -3,13 +3,13 @@ import { Component, OnInit, inject } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../services/auth-service.service';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 @Component({
   selector: 'app-register',
   templateUrl: './register.component.html',
   styleUrl: './register.component.css',
   standalone:true,
-  imports:[CommonModule,FormsModule,HttpClientModule]
+  imports:[CommonModule,FormsModule]
 })
 export class RegisterComponent implements OnInit{
   name: string='';

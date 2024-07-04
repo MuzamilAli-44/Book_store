@@ -1,1 +1,32 @@
 <app-home> </app-home>
+<div class="container">
+    <h1> Add Books </h1>
+    <form style="background-color: #7ba5d2;" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
+      <div>
+        <label for="name">Title :</label>
+        <input type="text" [(ngModel)]="name" name="name" required>
+      </div>
+
+      <div>
+        <label for="author">Author :</label>
+        <input type="text" [(ngModel)]="author" name="author" required>
+      </div>
+
+      <div>
+        <label for="category">Category :</label>
+        <input type="text" [(ngModel)]="category" name="category" required>
+      </div>
+
+      <div>
+        <label for="rating">Rating :</label>
+        <input type="range" [(ngModel)]="rating" name="rating" required>
+      </div>
+
+
+    
+  
+     
+      <button class="button" type="submit" [disabled]="!registerForm.valid" >Register</button>
+    </form>
+  </div>
+  
