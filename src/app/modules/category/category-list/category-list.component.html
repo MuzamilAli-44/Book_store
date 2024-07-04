@@ -6,7 +6,7 @@
         type="text"
         placeholder="Search for any Categories"
         [(ngModel)]="searchQuery"
-        (input)="filterData()"
+        (input)="onSearch()"
       />
     </div>
   </div>
@@ -14,7 +14,7 @@
   <div class="results">
     <ul class="book-list">
       <li *ngFor="let book of filteredData" class="book-tile">
-        <h2>{{ book.title }}</h2>
+        <h2>{{ book.name }}</h2>
         <p><b>Author:</b> {{ book.author }}</p>
         <p><b>Category:</b> {{ book.category }}</p>
         <p><b>Rating:</b> {{ book.rating }}</p>
@@ -22,7 +22,7 @@
     </ul>
     <p
       *ngIf="filteredData.length === 0"
-      style="color: white"
+      class="no-results"
     >
       No results found.
     </p>

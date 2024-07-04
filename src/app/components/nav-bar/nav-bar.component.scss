@@ -38,6 +38,7 @@
   display: flex; /* Aligns left links horizontally */
   align-items: center; /* Centers items vertically */
   margin-right: 2%;
+  white-space: nowrap;
 }
 
 .separator {

@@ -10,6 +10,8 @@
   display: flex;
   justify-content: center;
   margin-bottom: 3rem;
+  position: relative;
+  z-index: 1100; 
 }
 
 input[type="text"] {

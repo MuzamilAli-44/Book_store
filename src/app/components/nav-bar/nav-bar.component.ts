@@ -5,12 +5,11 @@ import {
   RouterLinkActive,
   RouterOutlet,
 } from '@angular/router';
-import { LogoutComponent } from '../../modules/authentication/logout/logout.component';
 
 @Component({
   selector: 'app-nav-bar',
   standalone: true,
-  imports: [RouterLinkActive, RouterLink, RouterOutlet, LogoutComponent],
+  imports: [RouterLinkActive, RouterLink, RouterOutlet],
   templateUrl: './nav-bar.component.html',
   styleUrl: './nav-bar.component.scss',
 })

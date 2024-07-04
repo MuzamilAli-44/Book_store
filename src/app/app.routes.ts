@@ -20,5 +20,6 @@ export const routes: Routes = [
       import('./modules/category/category.module').then(
         (m) => m.CategoryModule
       ),
+      
   },
 ];
