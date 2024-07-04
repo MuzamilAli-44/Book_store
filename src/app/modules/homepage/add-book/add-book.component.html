@@ -1,6 +1,6 @@
 <app-home> </app-home>
 <div class="container">
-    <h1> Add Books </h1>
+    <h1> Add Book </h1>
     <form style="background-color: #7ba5d2;" #registerForm="ngForm" (ngSubmit)="onSubmit(registerForm)">
       <div>
         <label for="name">Title :</label>
@@ -19,13 +19,10 @@
 
       <div>
         <label for="rating">Rating :</label>
-        <input type="range" [(ngModel)]="rating" name="rating" required>
+        <input type="input" [(ngModel)]="rating" name="rating" required min="0" max="10" class="no-arrows">
       </div>
 
 
-    
-  
-     
       <button class="button" type="submit" [disabled]="!registerForm.valid" >Register</button>
     </form>
   </div>
