@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
-import { AuthService } from '../../../auth-service.service';
+import { AuthService } from '../services/auth-service.service';
 
 @Component({ 
   selector: 'app-login',
@@ -18,19 +18,26 @@ export class LoginComponent {
   password: string='';
   hidePassword:boolean=true;
 
-  constructor(private router: Router, private authService: AuthService) {}
+  constructor(private router: Router, private authService: AuthService,private loggings:AuthService) {}
 
   onSubmit(form: any) {
-    if (this.authService.login(form.value.email, form.value.password)) {
-      alert('Login successful!');
-      this.router.navigate(['search']);
-    } 
-    else {
-      alert('Invalid credentials. Please try again.');
-    }
+    const userData = {
+      username: form.value.email, 
+      password: form.value.password
+    };
+  
+    this.authService.loggedin(userData).subscribe({
+      next: (response) => {
+        console.log("Login successful!", response);
+        this.router.navigate(['search']);
+      },
+      error: (err) => {
+        console.error("Login error:", err);
+        alert('Invalid credentials. Please try again.');
+      }
+    });
   }
-
-
+  
   navigateToUrl(event:any,url:string){
     event.preventDefault()
     this.router.navigateByUrl(url)
