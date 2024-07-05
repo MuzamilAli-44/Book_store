@@ -19,11 +19,11 @@
 
       <div>
         <label for="rating">Rating :</label>
-        <input type="input" [(ngModel)]="rating" name="rating" required min="0" max="10" class="no-arrows">
+        <input type="number" [(ngModel)]="rating" name="rating" required min="0" max="10" class="no-arrows">
       </div>
 
 
-      <button class="button" type="submit" [disabled]="!registerForm.valid" >Register</button>
+      <button class="button" type="submit" [disabled]="!registerForm.valid" >Add</button>
     </form>
   </div>
   
