@@ -18,7 +18,7 @@ export class LoginComponent {
   password: string='';
   hidePassword:boolean=true;
 
-  constructor(private router: Router, private authService: AuthService,private loggings:AuthService) {}
+  constructor(private router: Router, private authService: AuthService) {}
 
   onSubmit(form: any) {
     const userData = {
