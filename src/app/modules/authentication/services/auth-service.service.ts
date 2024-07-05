@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class AuthService {
   private isLogged: boolean = false;
-  url= "https://50c0-14-192-136-180.ngrok-free.app/auth/register";
+  Registerurl= "https://50c0-14-192-136-180.ngrok-free.app/auth/register";
   loginURL="https://50c0-14-192-136-180.ngrok-free.app/auth/login";
 
   constructor(private http:HttpClient){}
@@ -37,7 +37,7 @@ export class AuthService {
     email:string,
     password:string
   }){
-    return this.http.post(this.url,{ //use post to store data in db, entered in form by user 
+    return this.http.post(this.Registerurl,{ //use post to store data in db, entered in form by user 
       username:payload.username,
       email:payload.email,
       password:payload.password
@@ -48,7 +48,7 @@ export class AuthService {
     username:string,
     password:string
   }){
-    return this.http.post(this.loginURL,{ //use post to store data in db, entered in form by user 
+    return this.http.post(this.loginURL,{ 
       username:payload.username,
       password:payload.password
     });

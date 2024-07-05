@@ -11,7 +11,7 @@ import { HttpClient } from '@angular/common/http';
   standalone: true,
   imports: [CommonModule, FormsModule],
 })
-export class RegisterComponent implements OnInit {
+export class RegisterComponent {
   name: string = '';
   email: string = '';
   password: string = '';
@@ -39,7 +39,9 @@ export class RegisterComponent implements OnInit {
   togglePasswordVisibility() {
     this.hidePassword = !this.hidePassword;
   }
-  ngOnInit(): void {}
+  navigateToLogin(){
+    this.route.navigateByUrl('login');
+  }
 }
 //Before you save the array in the localStorage, you need to convert it to a string since it can only store strings. (stringify)
 

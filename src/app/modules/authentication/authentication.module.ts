@@ -14,9 +14,9 @@ const routes: Routes = [{ path: 'login', component: LoginComponent }];
     CommonModule,
     ModRoutingModule,
     FormsModule,
-    RegisterComponent,
+    // RegisterComponent,
     RouterModule.forChild(routes),
   ],
-  exports: [RegisterComponent],
+  // exports: [RegisterComponent],
 })
 export class ModModule {}
