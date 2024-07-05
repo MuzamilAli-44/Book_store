@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { Subscription } from 'rxjs';
 import { AddBooksService } from '../services/add-books.service';
 
 @Component({
@@ -21,10 +22,12 @@ export class AddBookComponent implements OnInit {
 
   httpClient = inject(HttpClient);
 
+  private subscription: Subscription = new Subscription();
+
   constructor(private route: Router, private addingBook: AddBooksService) {}
 
   onSubmit(form: any) {
-    // alert('you have registered');
+
     // Store the form data in local storage, make an obj
     const userData = {
       name: form.value.name,
@@ -34,12 +37,17 @@ export class AddBookComponent implements OnInit {
     };
 
     // localStorage.setItem('userData', JSON.stringify(userData)); //json to convert obj to string because setitem takes string
-    this.addingBook.Book_Add(userData).subscribe((data) => {
-      console.log('data', data);
-    });
+    this.subscription.add(
+      this.addingBook.Book_Add(userData).subscribe((data) => {
+        console.log('data', data);
+        alert('The Book has been added successfully');
+        form.resetForm();
+      })
+    );
   }
 
-  togglePasswordVisibility() {}
-
+  ngOnDestroy() {
+    this.subscription.unsubscribe(); // Unsubscribe to avoid memory leaks
+  }
   ngOnInit(): void {}
 }

@@ -18,7 +18,7 @@ h1 {
 form {
   max-width: 500px;
   width: 500px;
-  height: 400px;
+  height: 450px;
   margin: 0 auto;
   padding: 20px;
   border: 1px solid #ccc;
@@ -52,48 +52,62 @@ form input[type="number"] {
       outline: none;
     } */
 
+    .right-links a {
+      margin-left: auto; /* Pushes "Logout" link to the right */
+      margin-right: 40px;
+      background-color: rgb(21, 160, 123); /* Button background color */
+      color: white; /* Button text color */
+      border: none; /* Removes default border */
+      padding: 10px 20px; /* Adds padding to make it look like a button */
+      text-align: center; /* Centers text */
+      text-decoration: none; /* Removes underline */
+      display: inline-block; /* Allows for padding and other styling */
+      font-size: 17px; /* Adjusts font size */
+      cursor: pointer; /* Adds pointer cursor on hover */
+      border-radius: 5px; /* Rounds the corners */
+      transition: background-color 0.3s ease; /* Smooth transition */
+    }
+    
+    .right-links a:hover {
+      background-color: rgb(27, 134, 106);  /* Darker shade on hover */
+      color: white;
+      margin-right: 40px;
+    }
+
+
 /* Styles for the submit button */
 .button {
-  width: 100%;
+  width: 35%;
   padding: 10px;
-  background-color: #007bff;
   border: none;
-  border-radius: 4px;
-  color: white;
-  font-size: 16px;
+  border-radius: 5px;
+  font-size: 19px;
   cursor: pointer;
   display: block;
-  margin: 30px auto 0px; /* This centers the button horizontally */
+  margin: 20px auto 0px; /* This centers the button horizontally */
+  background-color: rgb(21, 160, 123); /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Removes default border */
+  padding: 10px 20px; /* Adds padding to make it look like a button */
+  text-align: center; /* Centers text */
+  cursor: pointer; /* Adds pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition */
 }
 
 /* Styles for the submit button on hover */
 form button[type="submit"]:hover {
-  background-color: #0056b3;
+  background-color: rgb(27, 134, 106);  /* Darker shade on hover */
+  color: white;
+  font-weight: bold;
+  font-size: larger;
 }
 
 /* Styles for form divs containing input fields */
 form div {
   margin-bottom: 15px;
 }
-.error {
-  color: red;
-  font-size: 16px;
-  margin-top: 5px;
-}
 
-.immg {
-  position: absolute;
-  top: 36%;
-  right: 10px;
-  transform: translateY(-50%);
-  cursor: pointer;
-  width: 27px; /* Adjust the width and height as needed */
-  height: 27px;
-}
 
-.password-input {
-  position: relative;
-}
 
 .no-arrows::-webkit-outer-spin-button,
 .no-arrows::-webkit-inner-spin-button {
@@ -101,3 +115,8 @@ form div {
   margin: 0;
 }
 
+/* For Firefox */
+.no-arrows {
+  -moz-appearance: textfield;
+  appearance: none; /* Standard property for compatibility */
+}

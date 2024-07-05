@@ -6,7 +6,7 @@ export const ChildrenRoutes: Routes = [
     path: '',
     loadComponent: () =>
       import('./search-bar/search-bar.component').then(
-        (m) => m.SearchBarComponent
+        (c) => c.SearchBarComponent
       ),
   },
   {
